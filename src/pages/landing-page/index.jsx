@@ -1,6 +1,10 @@
 import React, { useRef } from "react";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
+import HomeSection from "@/components/landing-page/home-section";
+import AboutSection from "@/components/landing-page/about-section";
+import ServicesSection from "@/components/landing-page/services-section";
+import ContactSection from "@/components/landing-page/contact-section";
 
 const index = () => {
   const homeRef = useRef(null);
@@ -12,20 +16,20 @@ const index = () => {
     <div className="bg-background">
       <Header homeRef={homeRef} aboutRef={aboutRef} servicesRef={servicesRef} contactRef={contactRef} />
 
-      <div ref={homeRef} className="h-screen bg-slate-500">
-        <h2>Home</h2>
+      <div ref={homeRef} className="h-screen">
+        <HomeSection />
       </div>
 
-      <div ref={aboutRef} className="h-screen bg-amber-200">
-        <h2>About Us</h2>
+      <div ref={aboutRef} className="h-screen">
+        <AboutSection />
       </div>
 
-      <div ref={servicesRef} className="h-screen bg-zinc-400">
-        <h2>Services</h2>
+      <div ref={servicesRef} className="h-screen">
+        <ServicesSection />
       </div>
 
       <div ref={contactRef} className="h-screen">
-        <h2>Contact</h2>
+        <ContactSection />
       </div>
 
       <Footer />
