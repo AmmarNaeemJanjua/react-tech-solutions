@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Header from "@/layouts/Header";
+import Footer from "@/layouts/Footer";
 
 const index = () => {
   const homeRef = useRef(null);
@@ -8,7 +9,7 @@ const index = () => {
   const contactRef = useRef(null);
 
   return (
-    <>
+    <div className="bg-background">
       <Header homeRef={homeRef} aboutRef={aboutRef} servicesRef={servicesRef} contactRef={contactRef} />
 
       <div ref={homeRef} className="h-screen bg-slate-500">
@@ -26,7 +27,9 @@ const index = () => {
       <div ref={contactRef} className="h-screen">
         <h2>Contact</h2>
       </div>
-    </>
+
+      <Footer />
+    </div>
   );
 };
 
