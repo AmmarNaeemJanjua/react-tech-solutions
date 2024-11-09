@@ -13,27 +13,27 @@ const index = () => {
   const contactRef = useRef(null);
 
   return (
-    <div className="bg-background">
+    <>
       <Header homeRef={homeRef} aboutRef={aboutRef} servicesRef={servicesRef} contactRef={contactRef} />
 
-      <div ref={homeRef} className="h-screen">
+      <div ref={homeRef} className="h-screen bg-hero-img bg-cover sm:bg-center">
         <HomeSection />
       </div>
 
-      <div ref={aboutRef} className="h-screen">
+      <div ref={aboutRef} className="bg-gray-100">
         <AboutSection />
       </div>
 
-      <div ref={servicesRef} className="h-screen">
+      <div ref={servicesRef} className="bg-white">
         <ServicesSection />
       </div>
 
-      <div ref={contactRef} className="h-screen">
+      <div ref={contactRef} className="bg-contact-img bg-cover sm:bg-center">
         <ContactSection />
       </div>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

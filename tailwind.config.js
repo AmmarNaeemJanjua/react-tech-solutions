@@ -7,15 +7,18 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-img": "url('/src/assets/images/hero_section.jpg')",
+        "contact-img": "url('/src/assets/images/contact_section.jpg')",
+      },
       fontFamily: {
         sans: ["Manrope", "Helvetica Neue", "sans-serif"],
       },
       colors: {
         primary: "#416CFF",
-        background: "#f0f2f5",
         "dark-blue": "#071526",
-        grey: "#8B949F",
-        "grey-1": "#47505B",
+        grey: "#d1d5db",
+        "grey-1": "#85919f",
       },
     },
   },

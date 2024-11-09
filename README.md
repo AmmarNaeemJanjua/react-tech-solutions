@@ -1,8 +1,29 @@
-# React + Vite
+# Tech Solutions (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a responsive landing page for a fictional service, "Tech Solutions". It utilizes **React JS** for building the user interface and **Tailwind CSS** for styling.
 
-Currently, two official plugins are available:
+## Recommended IDE Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[VSCode](https://code.visualstudio.com/)
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```

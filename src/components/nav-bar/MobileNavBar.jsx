@@ -45,7 +45,7 @@ const MobileNavBar = ({ isScrolled, currentHash, navLinks, handleScroll }) => {
     <>
       <div
         className={`fixed left-0 right-0 top-0 mx-auto block w-full border border-transparent p-5 backdrop-blur-xl transition-all duration-300 sm:hidden ${
-          isScrolled ? "border-b-gray" : ""
+          isScrolled ? "border-b-grey" : ""
         }`}
       >
         <nav className={`flex justify-between`}>
@@ -54,17 +54,22 @@ const MobileNavBar = ({ isScrolled, currentHash, navLinks, handleScroll }) => {
           <div className="flex gap-3">
             <Button
               text={"Get Started"}
-              className={`rounded-xl bg-primary px-3 text-sm text-dark-blue hover:bg-primary/80`}
+              className={`rounded-xl bg-primary px-3 text-sm text-white hover:bg-blue-600`}
             />
 
-            <Button icon={MdOutlineMenu} className={`p-1`} iconClassName={"size-5"} onClick={toggleMenu} />
+            <Button icon={MdOutlineMenu} className={`p-1 text-grey-1`} iconClassName={"size-5"} onClick={toggleMenu} />
           </div>
         </nav>
       </div>
 
       {isMenuOpen && (
         <div className="fixed bottom-0 left-0 right-0 top-0 z-10 flex items-center justify-center backdrop-blur-xl">
-          <Button icon={MdClose} className={"fixed right-5 top-5 p-1"} iconClassName={"size-6"} onClick={toggleMenu} />
+          <Button
+            icon={MdClose}
+            className={"fixed right-5 top-5 p-1 text-grey-1"}
+            iconClassName={"size-6"}
+            onClick={toggleMenu}
+          />
 
           <div className="flex flex-col gap-7">
             <Logo className={`rounded bg-primary px-2 text-2xl text-white`} />
@@ -73,7 +78,7 @@ const MobileNavBar = ({ isScrolled, currentHash, navLinks, handleScroll }) => {
               {navLinks.map((link) => (
                 <li
                   key={link.title}
-                  className={`text-xl font-medium hover:text-dark-blue ${currentHash === link.path ? "text-dark-blue" : "text-grey-1"}`}
+                  className={`text-xl font-medium hover:text-primary ${currentHash === link.path ? "text-primary" : "text-grey-1"}`}
                 >
                   <Link
                     to={link.path}

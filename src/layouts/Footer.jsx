@@ -8,7 +8,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-dark-blue py-5 text-white">
+    <footer className="bg-blue-900 py-5 text-white">
       <div className="flex flex-col items-center justify-between">
         <div className="mb-4 flex gap-6">
           {socialLinks.map((link) => (

@@ -14,8 +14,10 @@ const Logo = ({ className }) => {
 const NavBar = ({ isScrolled, currentHash, navLinks, handleScroll }) => {
   return (
     <div
-      className={`fixed left-0 right-0 top-0 mx-auto hidden border p-5 backdrop-blur-xl transition-all duration-300 sm:block ${
-        isScrolled ? "mt-2 max-w-80 rounded-full border-gray-300 py-3" : "w-full border-transparent"
+      className={`fixed left-0 right-0 top-0 mx-auto hidden border backdrop-blur-xl sm:block ${
+        isScrolled
+          ? "mt-2 max-w-80 rounded-full border-grey py-3"
+          : "w-full border-transparent p-5 sm:px-12 md:px-20 lg:px-14 xl:px-44 2xl:px-[11.4%]"
       }`}
     >
       <nav className={`flex ${isScrolled ? "justify-center" : "justify-between"}`}>
@@ -25,7 +27,7 @@ const NavBar = ({ isScrolled, currentHash, navLinks, handleScroll }) => {
           <ul className="flex items-center gap-3">
             {navLinks.map((link) => (
               <li
-                className={`text-base font-medium hover:text-dark-blue ${currentHash === link.path ? "text-dark-blue" : "text-grey-1"}`}
+                className={`text-base font-medium hover:text-primary ${currentHash === link.path ? "text-primary" : "text-grey-1"}`}
                 key={link.title}
                 onClick={() => handleScroll(link.ref)}
               >
@@ -36,7 +38,7 @@ const NavBar = ({ isScrolled, currentHash, navLinks, handleScroll }) => {
 
           <Button
             text={"Get Started"}
-            className={`rounded-xl bg-primary px-3 text-sm text-dark-blue hover:bg-primary/80 ${isScrolled && "hidden"}`}
+            className={`rounded-xl bg-primary px-3 text-sm text-white hover:bg-blue-600 ${isScrolled && "hidden"}`}
           />
         </div>
       </nav>
