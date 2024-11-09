@@ -10,7 +10,7 @@ const Header = ({ homeRef, aboutRef, servicesRef, contactRef }) => {
   const navLinks = [
     { title: "Home", path: "#home", ref: homeRef },
     { title: "About Us", path: "#about", ref: aboutRef },
-    { title: "Sevices", path: "#sevices", ref: servicesRef },
+    { title: "Services", path: "#services", ref: servicesRef },
     { title: "Contact", path: "#contact", ref: contactRef },
   ];
 
